@@ -1,14 +1,20 @@
 <h2>Post create page</h2>
-<hr>
 <mat-card>
+  <mat-form-field>
+    <input matInput type ="text" [(ngModel)]="enteredTitle">
+  </mat-form-field>
+  <br>
 <mat-form-field>
-  <textarea matInput rows="6" [value]="newPost" #postInput></textarea>
+  <textarea matInput rows="3" [(ngModel)]="enteredContent"></textarea>
 </mat-form-field>
+<br>
+<button mat-raised-button color="accent" (click)="onAddPost1()">Save Post</button>
+
+<!--
 <button mat-raised-button color="warn" (click)="onAddPost(postInput)">Save Post</button>
+-->
 </mat-card>
 
 <hr>
-<textarea rows="4" [(ngModel)]="enteredValue"></textarea>
-<button (click)="onAddPost1()">Save Post</button>
-<hr>
-<p>{{ newPost }}</p>
+
+
